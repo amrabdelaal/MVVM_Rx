@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+class SingleRepoViewModel {
+    var fullName: String
+    var updatedAt: String
+    
+    init(with repo: Repo) {
+        self.fullName = repo.full_name
+        self.updatedAt = Utilities().formateDate(input: repo.updated_at)
+    }
+}

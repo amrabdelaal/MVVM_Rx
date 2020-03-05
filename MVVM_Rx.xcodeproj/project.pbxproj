@@ -13,6 +13,8 @@
 		D80AFEED2411375F00682F2D /* ReposViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80AFEEC2411375F00682F2D /* ReposViewModel.swift */; };
 		D80AFEEF2411378800682F2D /* SingleRepoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80AFEEE2411378800682F2D /* SingleRepoViewModel.swift */; };
 		D80AFEF1241137A500682F2D /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80AFEF0241137A500682F2D /* DataService.swift */; };
+		D80AFEF324113D3400682F2D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80AFEF224113D3400682F2D /* Utilities.swift */; };
+		D80AFEF524114D7C00682F2D /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80AFEF424114D7C00682F2D /* RepoTableViewCell.swift */; };
 		D814BFD62410067E0098E460 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D814BFD52410067E0098E460 /* AppDelegate.swift */; };
 		D814BFD82410067E0098E460 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D814BFD72410067E0098E460 /* SceneDelegate.swift */; };
 		D814BFDA2410067E0098E460 /* ReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D814BFD92410067E0098E460 /* ReposViewController.swift */; };
@@ -43,6 +45,8 @@
 		D80AFEEC2411375F00682F2D /* ReposViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewModel.swift; sourceTree = "<group>"; };
 		D80AFEEE2411378800682F2D /* SingleRepoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRepoViewModel.swift; sourceTree = "<group>"; };
 		D80AFEF0241137A500682F2D /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		D80AFEF224113D3400682F2D /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		D80AFEF424114D7C00682F2D /* RepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
 		D814BFD22410067E0098E460 /* MVVM_Rx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM_Rx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D814BFD52410067E0098E460 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D814BFD72410067E0098E460 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 				D814BFDE241006800098E460 /* Assets.xcassets */,
 				D814BFE0241006800098E460 /* LaunchScreen.storyboard */,
 				D814BFE3241006800098E460 /* Info.plist */,
+				D80AFEF224113D3400682F2D /* Utilities.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				D814BFD92410067E0098E460 /* ReposViewController.swift */,
+				D80AFEF424114D7C00682F2D /* RepoTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -356,7 +362,9 @@
 				D814BFDA2410067E0098E460 /* ReposViewController.swift in Sources */,
 				D80AFEED2411375F00682F2D /* ReposViewModel.swift in Sources */,
 				D814BFD62410067E0098E460 /* AppDelegate.swift in Sources */,
+				D80AFEF524114D7C00682F2D /* RepoTableViewCell.swift in Sources */,
 				D814BFD82410067E0098E460 /* SceneDelegate.swift in Sources */,
+				D80AFEF324113D3400682F2D /* Utilities.swift in Sources */,
 				D80AFEEA241136E300682F2D /* Repo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

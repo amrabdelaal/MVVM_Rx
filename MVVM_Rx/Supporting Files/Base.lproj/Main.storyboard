@@ -14,10 +14,75 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="q6Y-Kd-mec">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="iqe-FV-wQL"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bEP-Tz-OpS">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RepoTableViewCell" rowHeight="76" id="ft6-up-3iz" customClass="RepoTableViewCell" customModule="MVVM_Rx" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="76"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ft6-up-3iz" id="G0A-sj-ht7">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="76"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FQo-EC-3Ao">
+                                                    <rect key="frame" x="10" y="0.0" width="404" height="76"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gh7-8n-gBr">
+                                                            <rect key="frame" x="0.0" y="0.0" width="404" height="34"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Update" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0V-cu-FfT">
+                                                            <rect key="frame" x="0.0" y="42" width="404" height="34"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="FQo-EC-3Ao" firstAttribute="leading" secondItem="G0A-sj-ht7" secondAttribute="leading" constant="10" id="Igf-j4-NNK"/>
+                                                <constraint firstItem="FQo-EC-3Ao" firstAttribute="top" secondItem="G0A-sj-ht7" secondAttribute="top" id="eUE-gk-Fx1"/>
+                                                <constraint firstAttribute="bottom" secondItem="FQo-EC-3Ao" secondAttribute="bottom" id="ijB-se-yNH"/>
+                                                <constraint firstAttribute="trailing" secondItem="FQo-EC-3Ao" secondAttribute="trailing" id="xQ2-zN-pqa"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lastUpdate" destination="i0V-cu-FfT" id="dCN-hu-obH"/>
+                                            <outlet property="repoName" destination="gh7-8n-gBr" id="ff2-1L-dX0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bEP-Tz-OpS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DDf-Ad-zkt"/>
+                            <constraint firstItem="q6Y-Kd-mec" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="I3r-wb-gPP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bEP-Tz-OpS" secondAttribute="bottom" id="XMV-Gn-LwK"/>
+                            <constraint firstItem="q6Y-Kd-mec" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="c7E-s9-3tc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bEP-Tz-OpS" secondAttribute="trailing" id="dmg-iC-AQ4"/>
+                            <constraint firstItem="q6Y-Kd-mec" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="l1l-sA-sEX"/>
+                            <constraint firstItem="bEP-Tz-OpS" firstAttribute="top" secondItem="q6Y-Kd-mec" secondAttribute="bottom" id="rYf-Vf-RGh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="1I0-WW-Zjq"/>
+                    <connections>
+                        <outlet property="searchBar" destination="q6Y-Kd-mec" id="41c-Lk-ENu"/>
+                        <outlet property="tableView" destination="bEP-Tz-OpS" id="65B-hM-ZfO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "56E45210-577E-412C-9A99-D75CF8940733"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FFAE32B2-CA76-41CE-86F8-48B19F1FC7C5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MVVM_Rx/ViewModel/ReposViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "getRepos(by:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FFAE32B2-CA76-41CE-86F8-48B19F1FC7C5 - cdd8b3c508c6010a"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;MVVM_Rx.Repo&gt;&gt;) -&gt; () in MVVM_Rx.ReposViewModel.getRepos(by: Swift.String) -&gt; ()"
+                  moduleName = "MVVM_Rx"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aabdelaal/Documents/Workspace/iOS/MVVM_Rx/MVVM_Rx/ViewModel/ReposViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "139">
+               </Location>
+               <Location
+                  uuid = "FFAE32B2-CA76-41CE-86F8-48B19F1FC7C5 - cec917b7e6f5152a"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MVVM_Rx.Repo) -&gt; MVVM_Rx.SingleRepoViewModel in closure #1 (Swift.Optional&lt;Swift.Array&lt;MVVM_Rx.Repo&gt;&gt;) -&gt; () in MVVM_Rx.ReposViewModel.getRepos(by: Swift.String) -&gt; ()"
+                  moduleName = "MVVM_Rx"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aabdelaal/Documents/Workspace/iOS/MVVM_Rx/MVVM_Rx/ViewModel/ReposViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "30">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
