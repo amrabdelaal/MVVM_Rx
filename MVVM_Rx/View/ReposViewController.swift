@@ -17,13 +17,24 @@ class ReposViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     //MARK: - Variables
-    var viewModel: ReposViewModel?
+    private var viewModel: ReposViewModel?
     private let disposeBag = DisposeBag()
-    
+    private let throttleIntervalInMilliseconds = 700
+}
+
+//MARK:- View Lifecycle
+extension ReposViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = ReposViewModel(dataService: DataService())
-        viewModel?.getRepos(by: "swift")
+        self.viewModel = ReposViewModel(dataService: DataService())
+        self.setupTableViewBinding()
+        self.setupSearchBarObserver()
+    }
+}
+
+//MARK: - Rx Setup
+private extension ReposViewController {
+    func setupTableViewBinding() {
         viewModel?.repos
             .bind(to: tableView
                 .rx
@@ -34,8 +45,20 @@ class ReposViewController: UIViewController {
                         cell.lastUpdate.text = repo.updatedAt
         }
         .disposed(by: disposeBag)
-        
     }
     
+    func setupSearchBarObserver() {
+        searchBar
+            .rx
+            .text
+            .observeOn(MainScheduler.asyncInstance)
+            .distinctUntilChanged()
+            .throttle(.milliseconds(throttleIntervalInMilliseconds), scheduler: MainScheduler.instance)
+            .subscribe(onNext: {[unowned self] in
+                self.viewModel?.getRepos(by: $0 ?? "")
+            })
+            .disposed(by: disposeBag)
+        
+    }
 }
 
